@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Slider from './slider';
+import Slider from './components/slider';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");

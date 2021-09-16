@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from "react";
+import data from "../assets/slider-data.json"
 
 const Slider = () => {
 
-  const [sliderData, setSliderData] = useState(null);
+  const [sliderData, setSliderData] = useState(data);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  console.log(sliderData);
 
   return(
     <div>
