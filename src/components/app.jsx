@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import Arrow from "./arrow";
 import Slider from "./slider";
 import data from "../assets/slider-data.json"
+import "../stylesheets/application.scss"
 
 const App = () => {
 
