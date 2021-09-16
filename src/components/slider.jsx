@@ -1,24 +1,21 @@
 import React, {useState, useEffect} from "react";
 import Arrow from "./arrow";
 import data from "../assets/slider-data.json"
-import image1 from "../assets/1.jpg";
-import image2 from "../assets/2.jpg";
-import image3 from "../assets/3.jpg";
-import image4 from "../assets/4.jpg";
-import image5 from "../assets/5.jpg";
 
 const Slider = () => {
 
   const [sliderData, setSliderData] = useState(data);
   const [slideIndex, setSlideIndex] = useState(0);
-  const [currentSlide, setCurrentSlide] = useState(null);
-  console.log(sliderData.length);
+  const [currentSlide, setCurrentSlide] = useState(
+    <img src={`images/${data[0].image}`} alt={data[0].alt} />
+  );
+  const [previousSlide, setPreviousSlide] = useState(null);
 
   useEffect(() => {
-
+    changeSlide();
   }, [slideIndex]);
 
-  const changeSlide = (direction) => {
+  const changeIndex = (direction) => {
     const lastIndex = (sliderData.length - 1);
     if (direction === "left") {
       const shouldResetIndex = slideIndex === 0;
@@ -31,6 +28,16 @@ const Slider = () => {
     }
   }
 
+  const changeSlide = () => {
+    setPreviousSlide(currentSlide);
+    setCurrentSlide(
+      <img 
+        src={`images/${data[slideIndex].image}`} 
+        alt={data[slideIndex].alt} 
+      />
+    );
+  }
+
   return(
     <div>
       <header>
@@ -39,13 +46,13 @@ const Slider = () => {
       <div>
         <Arrow 
           direction="left"
-          clickFunction={changeSlide}
+          clickFunction={changeIndex}
           glyph="&#9664;"
         />
-
+        {currentSlide}
         <Arrow
           direction="right"
-          clickFunction={changeSlide}
+          clickFunction={changeIndex}
           glyph="&#9654;"
         />
       </div>
