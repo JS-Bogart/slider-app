@@ -29,6 +29,11 @@ const App = () => {
     }
   }
 
+  const handleCirle = (index) => {
+    setPreviousIndex(slideIndex);
+    setSlideIndex(index);
+  }
+
   return(
     <div>
       <header>
@@ -51,6 +56,22 @@ const App = () => {
           clickFunction={changeIndex}
           glyph="&#9654;"
         />
+      </div>
+      <div>
+        {data.map((item, index) => (
+          (index === slideIndex) ?
+            <p 
+              key={`${item.id}`}
+              className="circle-hl"
+              onClick={() => handleCirle(index)}
+            >&#9679;</p>
+          :
+            <p 
+              key={`${item.id}`}
+              className="circle"
+              onClick={() => handleCirle(index)}
+            >&#9679;</p>
+        ))}
       </div>
     </div>
   )
