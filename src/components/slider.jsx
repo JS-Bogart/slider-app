@@ -12,14 +12,23 @@ const Slider = () => {
   const [sliderData, setSliderData] = useState(data);
   const [slideIndex, setSlideIndex] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(null);
-  console.log(sliderData);
+  console.log(sliderData.length);
 
   useEffect(() => {
 
   }, [slideIndex]);
 
   const changeSlide = (direction) => {
-
+    const lastIndex = (sliderData.length - 1);
+    if (direction === "left") {
+      const shouldResetIndex = slideIndex === 0;
+      const index = shouldResetIndex ? lastIndex : slideIndex - 1;
+      setSlideIndex(index);
+    } else {
+      const shouldResetIndex = slideIndex === lastIndex;
+      const index = shouldResetIndex ? 0 : slideIndex + 1;
+      setSlideIndex(index);
+    }
   }
 
   return(
