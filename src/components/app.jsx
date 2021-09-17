@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Arrow from "./arrow";
 import Slider from "./slider";
+import Modal from "./modal";
 import data from "../assets/slider-data.json"
 import "../stylesheets/application.scss"
 
@@ -9,6 +10,7 @@ const App = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [previousIndex, setPreviousIndex] = useState(null);
   const [direction, setDirection] = useState("start");
+  const [modal, setModal] = useState(null);
 
   useEffect(() => {
     
@@ -36,6 +38,19 @@ const App = () => {
     setSlideIndex(index);
   }
 
+  const openModal = (index) => {
+    setModal(
+      <Modal 
+        slide={data[index]}
+        closeModal={closeModal}
+      />
+    )
+  }
+
+  const closeModal = () => {
+    setModal(null);
+  }
+
   return(
     <div className="app">
       <header>
@@ -53,6 +68,7 @@ const App = () => {
             previousIndex={previousIndex}
             data={data}
             direction={direction}
+            openModal={openModal}
           />
         </div>
         <Arrow
@@ -77,6 +93,7 @@ const App = () => {
             >&#9679;</p>
         ))}
       </div>
+      {modal}
     </div>
   )
 }

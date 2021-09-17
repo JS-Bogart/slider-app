@@ -1,6 +1,6 @@
 import React from "react";
 
-const Slider = ({slideIndex, previousIndex, data, direction}) => {
+const Slider = ({slideIndex, previousIndex, data, direction, openModal}) => {
   if (direction === "right") {
     return(
       <div 
@@ -11,11 +11,13 @@ const Slider = ({slideIndex, previousIndex, data, direction}) => {
           className="slider-img previous-slide"
           src={`images/${data[previousIndex].image}`}
           alt={data[previousIndex].alt}
+          onClick={() => openModal(previousIndex)}
         />
         <img
           className="slider-img current-slide"
           src={`images/${data[slideIndex].image}`}
           alt={data[slideIndex].alt}
+          onClick={() => openModal(slideIndex)}
         />
       </div>
     )
@@ -29,11 +31,13 @@ const Slider = ({slideIndex, previousIndex, data, direction}) => {
           className="slider-img current-slide"
           src={`images/${data[slideIndex].image}`}
           alt={data[slideIndex].alt}
+          onClick={() => openModal(slideIndex)}
         />
         <img
           className="slider-img previous-slide"
           src={`images/${data[previousIndex].image}`}
           alt={data[previousIndex].alt}
+          onClick={() => openModal(previousIndex)}
         />
       </div>
     )
@@ -44,6 +48,7 @@ const Slider = ({slideIndex, previousIndex, data, direction}) => {
           className="slider-img current-slide"
           src={`images/${data[slideIndex].image}`}
           alt={data[slideIndex].alt}
+          onClick={() => openModal(slideIndex)}
         />
       </div>
     )
