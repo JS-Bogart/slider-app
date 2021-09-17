@@ -1,0 +1,57 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  font-size: 50px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.slider-box {
+  display: flex;
+  align-items: center;
+}
+
+.slider-wrap {
+  width: 70vh;
+  height: auto;
+  overflow: hidden;
+  margin-left: 5vh;
+  margin-right: 5vh;
+}
+
+.circle-box {
+  display: flex;
+  align-items: center;
+  margin: 1vh;
+}
+
+.circle {
+  margin: 1vh;
+  font-size: 50px;
+    &:hover {
+      cursor: pointer;
+    }
+}
+
+.circle-nhl {
+  color: rgb(196,196,196);
+}
+
+.circle-hl {
+  color: rgb(57,57,57);
+}

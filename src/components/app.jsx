@@ -31,45 +31,48 @@ const App = () => {
   }
 
   const handleCirle = (index) => {
+    (index < slideIndex) ? setDirection("left") : setDirection("right");
     setPreviousIndex(slideIndex);
     setSlideIndex(index);
   }
 
   return(
-    <div>
+    <div className="app">
       <header>
         Slider App
       </header>
-      <div>
+      <div className="slider-box">
         <Arrow 
           direction="left"
           clickFunction={changeIndex}
           glyph="&#9664;"
         />
-        <Slider 
-          slideIndex={slideIndex}
-          previousIndex={previousIndex}
-          data={data}
-          direction={direction}
-        />
+        <div className="slider-wrap">
+          <Slider 
+            slideIndex={slideIndex}
+            previousIndex={previousIndex}
+            data={data}
+            direction={direction}
+          />
+        </div>
         <Arrow
           direction="right"
           clickFunction={changeIndex}
           glyph="&#9654;"
         />
       </div>
-      <div>
+      <div className="circle-box">
         {data.map((item, index) => (
           (index === slideIndex) ?
             <p 
               key={`${item.id}`}
-              className="circle-hl"
+              className="circle circle-hl"
               onClick={() => handleCirle(index)}
             >&#9679;</p>
           :
             <p 
               key={`${item.id}`}
-              className="circle"
+              className="circle circle-nhl"
               onClick={() => handleCirle(index)}
             >&#9679;</p>
         ))}

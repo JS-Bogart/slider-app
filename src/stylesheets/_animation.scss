@@ -1,0 +1,52 @@
+// .slider-dir-right {
+//   -webkit-transition: 1s;
+//   -moz-transition: 1s;
+//   -ms-transition: 1s;
+//   -o-transition: 1s;
+//   transition: 1s;
+//   transform-origin: right;
+//   transform: translate(-70vh);
+// }
+
+// .slider-dir-left {
+//   -webkit-transition: 1s;
+//   -moz-transition: 1s;
+//   -ms-transition: 1s;
+//   -o-transition: 1s;
+//   transition: 1s;
+//   transform: translate(0vh);
+// }
+
+.slider-dir-right {
+  position: relative;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: shiftright;
+}
+
+.slider-dir-left {
+  position: relative;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: shiftleft;
+}
+
+@keyframes shiftright {
+  from {
+    left: 0vh;
+  }
+
+  to {
+    left: -70vh;
+  }
+}
+
+@keyframes shiftleft {
+  from {
+    left: -70vh;
+  }
+
+  to {
+    left: 0vh;
+  }
+}

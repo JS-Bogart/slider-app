@@ -3,14 +3,17 @@ import React from "react";
 const Slider = ({slideIndex, previousIndex, data, direction}) => {
   if (direction === "right") {
     return(
-      <div className={`slider-${direction}`}>
+      <div 
+        key={slideIndex}
+        className={`slider slider-dir-${direction}`}
+      >
         <img
-          className="previous-slide"
+          className="slider-img previous-slide"
           src={`images/${data[previousIndex].image}`}
           alt={data[previousIndex].alt}
         />
         <img
-          className="current-slide"
+          className="slider-img current-slide"
           src={`images/${data[slideIndex].image}`}
           alt={data[slideIndex].alt}
         />
@@ -18,14 +21,17 @@ const Slider = ({slideIndex, previousIndex, data, direction}) => {
     )
   } else if (direction === "left") {
     return (
-      <div className={`slider-${direction}`}>
+      <div 
+        key={slideIndex}
+        className={`slider slider-dir-${direction}`}
+      >
         <img
-          className="current-slide"
+          className="slider-img current-slide"
           src={`images/${data[slideIndex].image}`}
           alt={data[slideIndex].alt}
         />
         <img
-          className="previous-slide"
+          className="slider-img previous-slide"
           src={`images/${data[previousIndex].image}`}
           alt={data[previousIndex].alt}
         />
@@ -33,9 +39,9 @@ const Slider = ({slideIndex, previousIndex, data, direction}) => {
     )
   } else {
     return (
-      <div className={`slider-${direction}`}>
+      <div className={`slider`}>
         <img
-          className="current-slide"
+          className="slider-img current-slide"
           src={`images/${data[slideIndex].image}`}
           alt={data[slideIndex].alt}
         />
