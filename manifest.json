@@ -1,0 +1,35 @@
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "1.jpg",
+      "type": "image/jpg",
+      "sizes": "960x540"
+    },
+    {
+      "src": "2.jpg",
+      "type": "image/jpg",
+      "sizes": "960x540"
+    },
+    {
+      "src": "3.jpg",
+      "type": "image/jpg",
+      "sizes": "960x540"
+    },
+    {
+      "src": "4.jpg",
+      "type": "image/jpg",
+      "sizes": "960x540"
+    },
+    {
+      "src": "5.jpg",
+      "type": "image/jpg",
+      "sizes": "960x540"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
