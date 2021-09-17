@@ -3,22 +3,28 @@ html {
 }
 
 body {
+  height: inherit;
+}
+
+#root {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: inherit;
 }
 
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: inherit;
 }
 
 header {
   font-size: 50px;
   margin-top: 2vh;
-  margin-bottom: 2vh;
+  margin-bottom: 15vh;
 }
 
 .slider-box {
@@ -32,6 +38,7 @@ header {
   overflow: hidden;
   margin-left: 5vh;
   margin-right: 5vh;
+  border-radius: 5px;
 }
 
 .circle-box {
