@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/slider-app/static/css/main.066e2827.chunk.css",
-    "main.js": "/slider-app/static/js/main.f89b4f32.chunk.js",
-    "main.js.map": "/slider-app/static/js/main.f89b4f32.chunk.js.map",
+    "main.css": "/slider-app/static/css/main.975135bb.chunk.css",
+    "main.js": "/slider-app/static/js/main.c48b2adf.chunk.js",
+    "main.js.map": "/slider-app/static/js/main.c48b2adf.chunk.js.map",
     "runtime-main.js": "/slider-app/static/js/runtime-main.9fce7256.js",
     "runtime-main.js.map": "/slider-app/static/js/runtime-main.9fce7256.js.map",
     "static/js/2.57e7bf20.chunk.js": "/slider-app/static/js/2.57e7bf20.chunk.js",
     "static/js/2.57e7bf20.chunk.js.map": "/slider-app/static/js/2.57e7bf20.chunk.js.map",
     "index.html": "/slider-app/index.html",
-    "static/css/main.066e2827.chunk.css.map": "/slider-app/static/css/main.066e2827.chunk.css.map",
+    "static/css/main.975135bb.chunk.css.map": "/slider-app/static/css/main.975135bb.chunk.css.map",
     "static/js/2.57e7bf20.chunk.js.LICENSE.txt": "/slider-app/static/js/2.57e7bf20.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9fce7256.js",
     "static/js/2.57e7bf20.chunk.js",
-    "static/css/main.066e2827.chunk.css",
-    "static/js/main.f89b4f32.chunk.js"
+    "static/css/main.975135bb.chunk.css",
+    "static/js/main.c48b2adf.chunk.js"
   ]
 }
