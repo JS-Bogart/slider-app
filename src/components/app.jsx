@@ -54,44 +54,46 @@ const App = () => {
   return(
     <div className="app">
       <header>
-        Slider App
+        <h1>Slider App</h1>
       </header>
-      <div className="slider-box">
-        <Arrow 
-          direction="left"
-          clickFunction={changeIndex}
-          glyph="&#9664;"
-        />
-        <div className="slider-wrap">
-          <Slider 
-            slideIndex={slideIndex}
-            previousIndex={previousIndex}
-            data={data}
-            direction={direction}
-            openModal={openModal}
+      <div className="slider-body">
+        <div className="slider-box">
+          <Arrow 
+            direction="left"
+            clickFunction={changeIndex}
+            glyph="&#9664;"
+          />
+          <div className="slider-wrap">
+            <Slider 
+              slideIndex={slideIndex}
+              previousIndex={previousIndex}
+              data={data}
+              direction={direction}
+              openModal={openModal}
+            />
+          </div>
+          <Arrow
+            direction="right"
+            clickFunction={changeIndex}
+            glyph="&#9654;"
           />
         </div>
-        <Arrow
-          direction="right"
-          clickFunction={changeIndex}
-          glyph="&#9654;"
-        />
-      </div>
-      <div className="circle-box">
-        {data.map((item, index) => (
-          (index === slideIndex) ?
-            <p 
-              key={`${item.id}`}
-              className="circle circle-hl"
-              onClick={() => handleCirle(index)}
-            >&#9679;</p>
-          :
-            <p 
-              key={`${item.id}`}
-              className="circle circle-nhl"
-              onClick={() => handleCirle(index)}
-            >&#9679;</p>
-        ))}
+        <div className="circle-box">
+          {data.map((item, index) => (
+            (index === slideIndex) ?
+              <p 
+                key={`${item.id}`}
+                className="circle circle-hl"
+                onClick={() => handleCirle(index)}
+              >&#9679;</p>
+            :
+              <p 
+                key={`${item.id}`}
+                className="circle circle-nhl"
+                onClick={() => handleCirle(index)}
+              >&#9679;</p>
+          ))}
+        </div>
       </div>
       {modal}
     </div>

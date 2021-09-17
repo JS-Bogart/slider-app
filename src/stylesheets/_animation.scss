@@ -1,22 +1,3 @@
-// .slider-dir-right {
-//   -webkit-transition: 1s;
-//   -moz-transition: 1s;
-//   -ms-transition: 1s;
-//   -o-transition: 1s;
-//   transition: 1s;
-//   transform-origin: right;
-//   transform: translate(-70vh);
-// }
-
-// .slider-dir-left {
-//   -webkit-transition: 1s;
-//   -moz-transition: 1s;
-//   -ms-transition: 1s;
-//   -o-transition: 1s;
-//   transition: 1s;
-//   transform: translate(0vh);
-// }
-
 .slider-dir-right {
   position: relative;
   animation-duration: 1s;
@@ -31,22 +12,38 @@
   animation-name: shiftleft;
 }
 
+.modal-img {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: expand-img;
+}
+
 @keyframes shiftright {
   from {
-    left: 0vh;
+    left: 0vw;
   }
 
   to {
-    left: -70vh;
+    left: -50vw;
   }
 }
 
 @keyframes shiftleft {
   from {
-    left: -70vh;
+    left: -50vw;
   }
 
   to {
-    left: 0vh;
+    left: 0vw;
+  }
+}
+
+@keyframes expand-img {
+  from {
+    width: 1vw;
+  }
+
+  to {
+    width: 70vw;
   }
 }
