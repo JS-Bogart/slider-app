@@ -1,21 +1,9 @@
+//animation for sliding images to the right
 .slider-dir-right {
   position: relative;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-name: shiftright;
-}
-
-.slider-dir-left {
-  position: relative;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-name: shiftleft;
-}
-
-.modal-img {
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-name: expand-img;
 }
 
 @keyframes shiftright {
@@ -28,14 +16,29 @@
   }
 }
 
+//animation for sliding images to the left
+.slider-dir-left {
+  position: relative;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: shiftleft;
+}
+
 @keyframes shiftleft {
   from {
     left: -50vw;
   }
-
+  
   to {
     left: 0vw;
   }
+}
+
+//animation for expanding image when modal opens
+.modal-img {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: expand-img;
 }
 
 @keyframes expand-img {

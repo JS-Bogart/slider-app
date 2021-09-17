@@ -12,10 +12,13 @@ const App = () => {
   const [direction, setDirection] = useState("start");
   const [modal, setModal] = useState(null);
 
+  //page re-renders upon updating slideIndex
   useEffect(() => {
     
   }, [slideIndex]);
 
+  //changes the slideIndex based on which direction is passed in by the arrow
+  //component, and updates the direction in the local state
   const changeIndex = (direction) => {
     setDirection(direction);
     const lastIndex = (data.length - 1);
@@ -32,12 +35,15 @@ const App = () => {
     }
   }
 
+  //changes the slideIndex and current image when a circle is clicked, and 
+  //updates the direction in the local state
   const handleCirle = (index) => {
     (index < slideIndex) ? setDirection("left") : setDirection("right");
     setPreviousIndex(slideIndex);
     setSlideIndex(index);
   }
 
+  //opens a modal for the corresponding image
   const openModal = (index) => {
     setModal(
       <Modal 
@@ -47,6 +53,7 @@ const App = () => {
     )
   }
 
+  //closes the current modal
   const closeModal = () => {
     setModal(null);
   }

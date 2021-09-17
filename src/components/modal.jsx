@@ -1,5 +1,6 @@
 import React from "react";
 
+//opens when an image is clicked, and closes upon being clicked
 const Modal = ({slide, closeModal}) => (
   <div 
     className="modal"

@@ -68,10 +68,12 @@ h1 {
     }
 }
 
+//classname for circles corresponding to unseen images
 .circle-nhl {
   color: rgb(196,196,196);
 }
 
+//classname for highlighting circle corresponding to the current image
 .circle-hl {
   color: rgb(57,57,57);
 }
